@@ -1,17 +1,5 @@
  /**
- * This script has been auto-generated from the command history in QuPath 0.7.0.
- *
- * I completed this script: it automatized the analysis for each image : segmentation of the cells based on DAPI extend the area of 20µm to get a pseudo cytplasm region, measure fluorescence values of cytplasm and nucleus, and save a .csv file for each image with a number of lines = to the number of cell detected. --> you can then merge all these dataset of R, Python, whateven...
- *  - You may need to edit the script before applying it to new images.
- *  - You should not run scripts you don't understand or from untrusted sources.
- *
- * For information about citing QuPath in a paper, see "Help > Citing QuPath in a paper (web)".
- * 
- * 
- * --> IMPORTANT TO READ BEFORE USE : 
- * THIS SCRIPT REQUIRES TO FIRST PERFORM A "TRAIN PIXEL CLASSIFIER" with two class trained, a class "cell" trained with manual annotation of cells (nucleus and cytoplasm included, with only two channels in "features" for the training : DAPI and the channel corresponding to the Cell mask), and a class "background" trained with a manual annotation of background. Once the model is trained and is satisfactory, save it as "cell_background" --> the model should be able to draw a clear barriere between cells and background. You can adjust the  Minimum object size (µm²) and Minimum hold size (µm²) in this line : "createAnnotationsFromPixelClassifier", that's respectively the 2nd and 3rd arguments
- * 
- * /!\ BEFORE running this script, make sure that (i) the classification is correct, (ii)these arguments : "minAreaMicrons":40.0,"maxAreaMicrons":900.0,"threshold":5000.0,  work with your images (it may vary according to the DAPI dillution, cell mask dillution, the time of exposure, laser intensity...) --> just make sure it performs the segmentation correctly. To make the verification, perform the classification (so now you will have lot of annotation of cells), and run teh script "Script groovy pour dégager l'expansion du background" --> you will be able to see visually the result of the segmentation, then you can copy and paste the arguments to this script
+ * /!\ BEFORE running this script, make sure that (i) the classification is correct, (ii)these arguments : "minAreaMicrons":40.0,"maxAreaMicrons":900.0,"threshold":5000.0,  work with your images (it may vary according to the DAPI dillution, cell mask dillution, the time of exposure, laser intensity...) --> just make sure it performs the segmentation correctly with the script "groovy_script_for_adjusted_segmentation.groovy". 
  */
 import qupath.lib.roi.GeometryTools
 import qupath.lib.objects.PathObjects
