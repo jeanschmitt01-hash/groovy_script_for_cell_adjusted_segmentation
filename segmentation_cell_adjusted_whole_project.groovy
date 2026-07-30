@@ -1,5 +1,7 @@
  /**
  * /!\ BEFORE running this script, make sure that (i) the classification is correct, (ii)these arguments : "minAreaMicrons":40.0,"maxAreaMicrons":900.0,"threshold":5000.0,  work with your images (it may vary according to the DAPI dillution, cell mask dillution, the time of exposure, laser intensity...) --> just make sure it performs the segmentation correctly with the script "groovy_script_for_adjusted_segmentation.groovy". 
+ * Once you are happy with the parameters you set with the script "groovy_script_for_adjusted_segmentation.groovy", and happy with the final segmentation, you can upload all you images of the same condition (images must have been acquired with the exact same parameters on the microscope) in the same Qupath project and run this script which will process each image of the project. You will get an excel file in your working directory with around 60 different measurements (morphology and intensity of color) for each cell of each image. 
+
  */
 import qupath.lib.roi.GeometryTools
 import qupath.lib.objects.PathObjects
