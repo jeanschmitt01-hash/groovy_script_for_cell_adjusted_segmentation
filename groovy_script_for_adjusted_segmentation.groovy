@@ -1,11 +1,11 @@
 /**
  * Script for Qupath software 
- * I made that script to improve the segmentation accuracy  (especially the cell expansion)of fluorescence images of cells cytospinned on slides. 
- * It is a script to delimit the segmentation and cell expansion to an ROI made with a pixel classifier on Qupath (so that it does not include the area next to the cells, which does not contain cells, and so with very low pixel values that may skew the MFIs). Compatible QuPath 0.7.0
+ * I made that script to improve the segmentation accuracy  (especially the cell expansion) of fluorescence images of cells cytospinned on slides --> so that you have a clear and distinguised nuclear area and cytoplasm area. 
+ * It is a script to delimit the segmentation of the cell expansion to an ROI made with a pixel classifier on Qupath (so that it does not include the area next to the cells, which does not contain cells, and so with very low pixel values that may skew the MFIs). Compatible QuPath 0.7.0
  * 
  * Before using the script : 
  * 0) Create a project
- * 1) Load the image
+ * 1) Load an image representative of the images you want to analyse in the same project
  * 2) In the section "Annotation" create a new class list named "cell"
  * 3) With the brush tool draw regions corresponding to where there are cells, each region will be displayed  in the "annotation list " section. In the "Class list" click on the class you just created ("cell"), then select all the regions you just drawn in the section "Annotation list" and press on "Set selected", so that all the regions corresponding of cells are now associated to the class "cell"
  * 4) In the section "Annotation" create a new class list named "background"
