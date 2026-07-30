@@ -5,3 +5,5 @@ The first script, "groovy_script_for_cell_adjusted_segmentation", is intended so
 
 Once you have identified the cell detection (segmentation) parameters that are appropriate for your images, update the corresponding values in the "segmentation_cell_adjusted_whole_project script".
 You can then load all of your images into the QuPath project and run "segmentation_cell_adjusted_whole_project". The script will perform cell segmentation across the entire project and generate measurements for every detected cell in each image.
+
+You can see the result of that script in the .png image. Keep in mind that the quality of the segmentation and the distinction nucleus/cytoplasm only depends on your pixel classification training. 
